@@ -8,7 +8,7 @@ public class DBConnector {
 	private static String driverName = "com.mysql.jdbc.Driver";
 	private static String url = "jdbc:mysql://localhost/rose";
 	private static String user = "root";
-	private static String password = "mysql";
+	private static String password = "";
 
 	public Connection getConnection() {
 		Connection con = null;
