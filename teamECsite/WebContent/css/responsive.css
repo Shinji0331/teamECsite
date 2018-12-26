@@ -1,0 +1,412 @@
+@charset "UTF-8";
+
+*  {
+	box-sizing:border-box;
+}
+li  {
+	list-style:none;
+}
+
+@media(max-width:1000px){
+#th {
+	font-size:20px;
+}
+/* =========================ヘッダー=========================== */
+#header2{
+	padding-top:15px;
+}
+.keywords{
+	display:block;
+	width:150px;
+}
+.category{
+	height:20px;
+	margin-bottom:5px;
+	margin-left:5px;
+}
+.headerbtn{
+	margin-top:6px;
+	width:70px;
+	margin-left:8px;
+}
+#search{
+	float:left;
+}
+#team{
+	font-size:14px;
+	width:8%;
+}
+/* =========================商品一覧ページ=========================== */
+ul{
+	padding:0;
+}
+.image_l{
+	width:160px;
+	height:160px;
+}
+.item_list_box{
+	padding-left:1%;
+}
+.image_m_box{
+	margin:0;
+	padding-bottom:20px;
+}
+.image_ll{
+	margin-top:25px;
+	width:240px;
+	height:240px;
+}
+.item_detail{
+	display:inline-block;
+	margin:12px 0 0 10px;
+}
+.recommend_box{
+	margin-top:30px;
+	height:200px;
+	width:33%;
+	padding:2%;
+	font-size:14px;
+}
+.recommend_box a{
+	float:left;
+}
+
+@media(max-width:630px){
+	body {
+	margin-top:80px;
+	margin-bottom:80px;
+}
+/* =========================共通=========================== */
+.pc{
+	display:none;
+}
+.responsive{
+	display:block;
+}
+#main{
+	margin:0 auto;
+}
+.tableB .txt{
+	font-size:14px;
+}
+.tableB th {
+	font-size: 12px;
+	padding:0;
+	text-align:center;
+}
+h1{
+	font-size:26px;
+}
+/* =========================フッター=========================== */
+#footer {
+	font-size: 12px;
+}
+/* =========================ヘッダー=========================== */
+#header{
+	height:80px;
+}
+#header2 {
+	display:none;
+}
+#team{
+	font-size:18px;
+	width:8%;
+}
+.menu {
+	float:right;
+}
+#nav-drawer {
+  position: relative;
+  float:left;
+  width:20%;
+  padding-top:28px;
+  padding-left:20px;
+  display:block;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: white;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 200px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #005392;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+#team {
+	display:inline-block;
+	width:60%;
+	margin:0;
+	text-align:center;
+}
+
+#nav-content a {
+	text-decoration:none;
+	color:white;
+}
+.btn_box:hover{
+	border-bottom:1px solid white;
+}
+.btn_box{
+	margin:5%;
+	padding:10px 20px 10px 20px;
+}
+.category{
+	margin:5%;
+	height:24px;
+	border:1px solid skyblue;
+	border-radius:8px;
+	margin:0;
+	margin:0 0 5px 3%;
+}
+.keywords {
+	font-size:15px;
+	line-height:30px;
+	padding:5px;
+	width:95%;
+}
+.serchbtn {
+	background:url(./images/s.png) no-repeat right center;
+	position:absolute;
+	right:15px;
+	top:12px;
+}
+.serchbtn img {
+	width:20px;
+	height:20px;
+}
+.serchframe {
+	position:relative;
+	display:inline-block;
+	width:100%;
+}
+.serchframe button {
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+/* =========================ログインページ=========================== */
+
+#LoginAction_0{
+	margin-top:20px;
+}
+#LoginAction{
+	width:100%;
+}
+.tableB .text {
+	font-size: 12px;
+	line-height:22px;
+}
+
+.message {
+	margin:0 auto;
+	margin-bottom:10px;
+	padding:5px 15px 5px 15px;
+}
+#th{
+	font-size:12px;
+}
+.logintable{
+	margin-top:30px;
+}
+/* =========================商品一覧ページ=========================== */
+.item_list_box {
+    width: 50%;
+    display:inline-block;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0.8;
+    height:250px;
+    margin:0;
+}
+.item_list_box ul{
+	padding:0;
+}
+.image_l {
+    width: 120px;
+    height: 120px;
+}
+.item_list_box li {
+    font-size:12px;
+}
+/* =========================商品詳細ページ=========================== */
+
+.image_ll {
+    width: 270px;
+    height: 270px;
+}
+.image_m_box {
+    float: left;
+    width:100%;
+    text-align:center;
+}
+.item_detail {
+    float: left;
+    margin-bottom: 50px;
+    text-align: center;
+    margin:0;
+    width:100%;
+}
+#AddCartAction_0{
+	margin-bottom:30px;
+}
+.similar_products{
+	height:180px;
+}
+.recommend_box{
+	font-size:14px;
+}
+/* ============================決済確認================================= */
+.stmbox{
+	width:100%;
+	border:1px solid #005392;
+	border-radius:20px;
+	box-shadow:4px 4px #AAAAAA;
+	text-align:left;
+	height:122px;
+	margin-bottom:20px;
+	display:block;
+}
+.stmbox li{
+	font-size:12px
+}
+.radiobox{
+	width:12%;
+	display:inline-block;
+	text-align:center;
+	line-height:120px;
+	float:left;
+}
+.contentsbox{
+	width:30%;
+	display:inline-block;
+}
+.destinationbox{
+	width:45%;
+	display:inline-block;
+}
+
+/* ============================カート================================= */
+#cartbox{
+	border:1px solid #005392;
+	border-radius:20px;
+	box-shadow:4px 4px #AAAAAA;
+	margin-bottom:10px;
+	height:160px;
+}
+.checkList{
+	margin:0;
+}
+.checkListBox{
+	width:10%;
+	margin-top:65px;
+	float:left;
+}
+.cartimg{
+	width:60px;
+	height:60px;
+	display:inline-block;
+	margin-bottom:20px;
+
+}
+.cartList1{
+	display:inline-block;
+	width:22%;
+	padding-top:10px;
+}
+.cartList2{
+	display:inline-block;
+	width:42%;
+}
+.cartList1 li,.cartList2 li{
+	font-size:10px;
+}
+#btnset #delete_btn{
+	margin:0;
+}
+#btnset .btn{
+	margin:0;
+}
+
+/* ============================商品購入履歴================================= */
+.purchaseH{
+	margin:30px auto;
+	width: 90%;
+}
+
+.purchaseH th{
+	font-size: 12px;
+}
+
+.purchaseH td{
+	font-size: 12px;
+}
+
+}

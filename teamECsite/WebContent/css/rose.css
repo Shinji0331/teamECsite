@@ -1,0 +1,412 @@
+@charset "utf-8";
+
+/* =========================================================================== */
+/* 全ページに共通                                                              */
+/* =========================================================================== */
+
+body {
+	margin-top:80px;
+	margin-bottom:80px;
+	font-size:62.5%;
+}
+
+#main {
+	margin-left: 30px;
+	width: 90%;
+    text-align: center;
+}
+
+/* ----------- */
+/* ヘッダー    */
+/* ----------- */
+.responsive {
+	display:none;
+}
+#team{
+	float:left;
+	height:80px;
+	width:10%;
+	line-height:80px;
+	text-align:center;
+	font-size:2.4em;
+}
+#header {
+	position : fixed;
+	height:80px;
+	top:0;
+	clear : both;
+	left : 0;
+	z-index : 100;
+	width : 100%;
+	color : #ffffff;
+	background-color : #005392;
+}
+#header2{
+	height:80px;
+	float:left;
+	width:90%;
+	padding-top:20px;
+}
+
+.headerbtn{
+	margin-left:10px;
+}
+
+.btn_box{
+	margin-top:20px;
+}
+#btn_box{
+	display:inline-block;
+}
+#search{
+	float:left;
+}
+
+.category{
+	width:120px;
+	background:#fafafa;
+	font-size:12px;
+	height:30px;
+}
+.keywords{
+	line-height:18px;
+	margin-left:5px;
+	width:180px;
+	border-radius:12px;
+	border:1px solid skyblue;
+	line-height:20px;
+	padding-left:5px;
+}
+
+/* ----------- */
+/* フッター    */
+/* ----------- */
+#footer {
+	position : fixed;
+	text-align : center;
+	bottom : 0;
+	clear : both;
+	left : 0;
+	z-index : 10;
+	width : 100%;
+	padding : 10px;
+	color : #ffffff;
+	background-color : #005392;
+}
+
+/* --------------- */
+/* ページ見出し    */
+/* --------------- */
+h1{
+	margin-top: 90px;
+	border-top: 3px solid #005392;
+	border-bottom: 3px solid #005392;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+	color: #005392;
+	font-size:3.2em;
+}
+
+/* ------------- */
+/* 基本ボタン    */
+/* ------------- */
+.btn {
+    border-radius:100px;
+    width:100px;
+	height : 35px;
+    font-size:10px;
+    text-align:center;
+    color:#fff;
+    box-shadow:2px 2px #1a6ea0;
+    background: #4b7ea1;
+}
+
+.btn:disabled {
+	opacity: 0.5;
+}
+
+/* ------------- */
+/* メッセージ    */
+/* ------------- */
+.message {
+	font-size: 13px;
+	padding: 15px 50px;
+	margin: 10px 20px;
+}
+
+.message_red {
+	border: 1px solid red;
+	color: red;
+	background-color: #FFBABA;
+}
+
+.message_blue {
+	border: 1px solid blue;
+	color: blue;
+	background-color: #BDE5F8;
+}
+
+.message_green {
+	border: 1px solid green;
+	color: green;
+	background-color: #DFF2BF;
+}
+
+/* =========================================================================== */
+/* テーブルフォーマット                                                        */
+/* =========================================================================== */
+/* -------------------------------- */
+/* tableA                           */
+/* 購入履歴・カート・宛先選択       */
+/* -------------------------------- */
+.tableA {
+	width: 90%;
+    border-collapse: collapse;
+	margin: 0 auto;
+}
+
+.tableA th, td {
+   font-size: 14px;
+   border: 1px solid #ccc;
+   text-align:center;
+}
+
+.tableA th {
+	background-color: #005392;
+	color: white;
+    padding: 5px;
+    height: 35px;
+}
+
+.tableA td {
+	padding:10px;
+
+}
+
+/* -------------------------------------------------------- */
+/* tableB                                                   */
+/* ユーザー登録・住所登録・パスワード再設定・ログイン       */
+/* -------------------------------------------------------- */
+.tableB{
+	width:100%;
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+}
+
+.tableB th, td {
+	text-align: left;
+    padding:10px 0 10px 10px;
+    font-size: 14px;
+}
+.tableB th{
+	width:25%;
+	border: 1px solid #ccc;
+	background-color:#005392;
+	color:white;
+}
+.tableB td{
+	height:30px;
+	width:75%;
+
+}
+.tableB .txt{
+	width:99%;
+	height:30px;
+	font-size:25px;
+}
+
+/* -------------------------------- */
+/* tableB_small                     */
+/* 商品詳細                         */
+/* -------------------------------- */
+.tableB_small{
+	margin:0 auto;
+	border-collapse: collapse;
+}
+
+.tableB_small th, td {
+	font-size: 14px;
+	border: 1px solid #ccc;
+
+}
+
+.tableB_small th {
+	width:30%;
+	text-align:center;
+	border: 1px solid #ccc;
+	background-color:#005392;
+	color:white;
+}
+.tableB_small td {
+	width:70%;
+	padding:10px;
+}
+
+/* =========================================================================== */
+/* イメージフォーマット                                                        */
+/* =========================================================================== */
+.image_s{
+	width : 50px;
+	height : 50px;
+}
+
+.image_m {
+	width : 100px;
+	height : 100px;
+}
+
+.image_l {
+	width : 200px;
+	height : 200px;
+}
+
+.image_ll {
+	width : 320px;
+	height : 320px;
+}
+
+/* =========================================================================== */
+/* 各ページに固有                                                              */
+/* =========================================================================== */
+/* --------------------- */
+/* 商品一覧              */
+/* --------------------- */
+ .item_list_box {
+	display:inline-block;
+	float : left;
+	width:32%;
+	height: 350px;
+	text-align:center;
+	background-color:#fff;
+	margin:2px;
+	opacity:0.8;
+}
+.item_list_box:hover {
+	opacity:1;
+}
+.item_list_box ul li {
+	list-style:none;
+}
+
+/* --------------------- */
+/* 商品詳細              */
+/* --------------------- */
+.image_m_box {
+	float:left;
+	margin-left:50px;
+}
+.item_detail {
+	float:left;
+	margin-left:50px;
+	margin-bottom:50px;
+	text-align:center;
+}
+.similar_products {
+	clear:both;
+}
+.recommend_box {
+	display:inline-block;
+	float:left;
+	width:32%;
+	text-align:center;
+	margin-bottom:80px;
+}
+.add_cart_btn {
+	margin-top:30px;
+}
+
+/* ----------------------- */
+/* カート画面              */
+/* ----------------------- */
+#btnset .btn {
+	margin-left: 20%;
+ }
+#btnset #delete_btn {
+	margin-left: 40%;
+}
+.totalPrice {
+	text-align: right;
+	padding-right: 10%;
+	color: lightslategray;
+}
+
+/* ----------------------- */
+/* ログイン画面            */
+/* ----------------------- */
+.loginbtn{
+	margin:0 auto;
+}
+.form{
+	width:90%;
+	margin:5px auto;
+	text-align:center;
+}
+.box{
+	margin-top:30px;
+	text-align:left;
+}
+.text{
+	font-size:20px;
+	width:95%;
+	background-color:#FFFFCC;
+}
+#th{
+	font-size:24px;
+}
+
+/* ----------------------- */
+/* マイページ画面          */
+/* ----------------------- */
+.submit {
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* --------------------- */
+/* 購入履歴画面          */
+/* --------------------- */
+.submit_btn {
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* --------------------- */
+/* 宛先情報登録画面      */
+/* --------------------- */
+.bigbox{
+	text-align:center;
+}
+.btn_one{
+	margin-top:20px;
+}
+
+/* --------------------- */
+/* 決済確認画面          */
+/* --------------------- */
+.stm_cfm_btn{
+	margin:0 auto;
+	margin-bottom:10px;
+	text-align:center;
+}
+
+.stm_cfm_table{
+	margin-bottom:10px;
+}
+
+
+/* ------------------------- */
+/* パスワードリセット画面    */
+/* ユーザー登録画面          */
+/* ------------------------- */
+.pass_form {
+	text-align:center;
+}
+.btn_center {
+	margin-top:30px;
+}
+
+/* =========================================================================== */
+
+
+
