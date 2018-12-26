@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 開発者モード(デバッグしたい時にはコメント外してください。ユーザーのエラーページが無効にできます) -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple"/>
+	<package name="com.internousdev.rose.action" extends="struts-default">
+
+		<!-- CreateUserAction -->
+        <action name="CreateUserAction" class="com.internousdev.rose.action.CreateUserAction" method="execute">
+            <result name="success">createUser.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- CreateUserConfirmAction -->
+        <action name="CreateUserConfirmAction" class="com.internousdev.rose.action.CreateUserConfirmAction" method="execute">
+            <result name="success">createUserConfirm.jsp</result>
+            <result name="error">error.jsp</result>
+            <result name="message">createUser.jsp</result>
+        </action>
+
+        <!-- CreateUserCompleteAction -->
+        <action name="CreateUserCompleteAction" class="com.internousdev.rose.action.CreateUserCompleteAction" method="execute">
+            <result name="success">createUserComplete.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- GoLoginAction -->
+        <action name="GoLoginAction" class="com.internousdev.rose.action.GoLoginAction" method="execute">
+            <result name="success">login.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- LoginAction -->
+        <action name="LoginAction" class="com.internousdev.rose.action.LoginAction" method="execute">
+            <result name="success">home.jsp</result>
+            <result name="settlement">settlementConfirm.jsp</result>
+            <result name="error">error.jsp</result>
+            <result name="message">login.jsp</result>
+        </action>
+
+        <!-- ResetPasswordAction -->
+        <action name="ResetPasswordAction" class="com.internousdev.rose.action.ResetPasswordAction" method="execute">
+            <result name="success">resetPassword.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- ResetPasswordConfirmAction -->
+        <action name="ResetPasswordConfirmAction" class="com.internousdev.rose.action.ResetPasswordConfirmAction" method="execute">
+             <result name="success">resetPasswordConfirm.jsp</result>
+             <result name="error">error.jsp</result>
+             <result name="message">resetPassword.jsp</result>
+         </action>
+
+        <!-- ResetPasswordCompleteAction -->
+        <action name="ResetPasswordCompleteAction" class="com.internousdev.rose.action.ResetPasswordCompleteAction" method="execute">
+            <result name="success">resetPasswordComplete.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- ProductListAction -->
+        <action name="ProductListAction" class="com.internousdev.rose.action.ProductListAction" method="execute">
+            <result name="success">productList.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- ProductDetailsAction -->
+        <action name="ProductDetailsAction" class="com.internousdev.rose.action.ProductDetailsAction" method="execute">
+            <result name="success">productDetails.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- SearchItemAction -->
+        <action name="SearchItemAction" class="com.internousdev.rose.action.SearchItemAction" method="execute">
+            <result name="success">productList.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- HomeAction -->
+        <action name="HomeAction" class="com.internousdev.rose.action.HomeAction" method="execute">
+            <result name="success">home.jsp</result>
+        </action>
+
+        <!-- AddCartAction -->
+        <action name="AddCartAction" class="com.internousdev.rose.action.AddCartAction" method="execute">
+            <result name="success">cart.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- CartAction -->
+        <action name="CartAction" class="com.internousdev.rose.action.CartAction" method="execute">
+            <result name="success">cart.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- DeleteCartAction -->
+        <action name="DeleteCartAction" class="com.internousdev.rose.action.DeleteCartAction" method="execute">
+            <result name="success">cart.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- SettlementConfirmAction -->
+        <action name="SettlementConfirmAction" class="com.internousdev.rose.action.SettlementConfirmAction" method="execute">
+            <result name="success">settlementConfirm.jsp</result>
+            <result name="back">login.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- SettlementCompleteAction -->
+        <action name="SettlementCompleteAction" class="com.internousdev.rose.action.SettlementCompleteAction" method="execute">
+            <result name="success">settlementComplete.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- CreateDestinationAction -->
+        <action name="CreateDestinationAction" class="com.internousdev.rose.action.CreateDestinationAction" method="execute">
+            <result name="success">createDestination.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- CreateDestinationConfirmAction -->
+        <action name="CreateDestinationConfirmAction" class="com.internousdev.rose.action.CreateDestinationConfirmAction" method="execute">
+            <result name="success">createDestinationConfirm.jsp</result>
+            <result name="back">createDestination.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- CreateDestinationCompleteAction -->
+        <action name="CreateDestinationCompleteAction" class="com.internousdev.rose.action.CreateDestinationCompleteAction" method="execute">
+            <result name="success">createDestinationComplete.jsp</result>
+            <result name="back">createDestination.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- MyPageAction -->
+        <action name="MyPageAction" class="com.internousdev.rose.action.MyPageAction" method="execute">
+            <result name="success">myPage.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- PurchaseHistoryAction -->
+        <action name="PurchaseHistoryAction" class="com.internousdev.rose.action.PurchaseHistoryAction" method="execute">
+            <result name="success">purchaseHistory.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- DeletePurchaseHistoryAction -->
+        <action name="DeletePurchaseHistoryAction" class="com.internousdev.rose.action.DeletePurchaseHistoryAction" method="execute">
+            <result name="success">purchaseHistory.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <!-- LogoutAction -->
+        <action name="LogoutAction" class="com.internousdev.rose.action.LogoutAction" method="execute">
+            <result name="success">index.jsp</result>
+            <result name="error">error.jsp</result>
+
+        </action>
+
+	</package>
+</struts>
