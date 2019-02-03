@@ -69,6 +69,7 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 			purchaseHistoryInfoDTOList.add(purchaseHistoryInfoDTO);
 		}
 		session.put("purchaseHistoryInfoDTOList", purchaseHistoryInfoDTOList);
+		session.remove("deleteCount");
 
 //			ログインIDを保持していたらSUCCESS、保持していなければログインページへ
 		if(!session.containsKey("loginId")){

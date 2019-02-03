@@ -24,7 +24,7 @@
 		<s:iterator value="firstNameErrorMessageList"><s:property /><br></s:iterator>
 	</div>
 </s:if>
-<s:if test="!famimyNameKanaErrorMessageList.size() == 0">
+<s:if test="!familyNameKanaErrorMessageList.size() == 0">
 	<div class="message message_red">
 		<s:iterator value="famimyNameKanaErrorMessageList"><s:property /><br></s:iterator>
 	</div>

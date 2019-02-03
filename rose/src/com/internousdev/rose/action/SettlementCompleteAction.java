@@ -16,9 +16,14 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 	private int destinationId;
 	private Map<String, Object>session;
 	private String cartFlg;
+	private int deleteCount;
 
 	public String execute(){
 		String result = ERROR;
+
+		if(session.containsKey("deleteCount")) {
+			return ERROR;
+		}
 //		セッションタイムアウトでエラー　
 		if(!session.containsKey("mCategoryDTOList")){
 			return ERROR;
@@ -47,26 +52,13 @@ public class SettlementCompleteAction extends ActionSupport implements SessionAw
 
 		if(count>0){
 			CartInfoDAO cartInfoDAO = new CartInfoDAO();
-//			if(count > 0){
-//				List<CartInfoDTO> cartInfoDTOList = new ArrayList<CartInfoDTO>();
-//				cartInfoDTOList = cartInfoDAO.getCartInfoDTOList(String.valueOf(session.get("loginId")));
-//				Iterator<CartInfoDTO> iterator = cartInfoDTOList.iterator();
-//				if(!(iterator.hasNext())){
-//					cartInfoDTOList = null;
-//				}
-//				session.put("cartInfoDTOList",cartInfoDTOList);
-
-//				int totalPrice = Integer.parseInt(String.valueOf(cartInfoDAO.getTotalPriceInCart(String.valueOf(session.get("loginId")))));
-//				session.put("totalPrice", totalPrice);
-
-//				カートフラグを削除
-				cartFlg ="0";
-				session.put("cartFlg", cartFlg);
-				result = SUCCESS;
-				count = cartInfoDAO.deleteAllInCart(String.valueOf(session.get("loginId")));
-
-			}
-//		}
+//			カートフラグを削除
+			cartFlg ="0";
+			session.put("cartFlg", cartFlg);
+			result = SUCCESS;
+			deleteCount = cartInfoDAO.deleteAllInCart(String.valueOf(session.get("loginId")));
+			session.put("deleteCount", deleteCount);
+		}
 		return result;
 	}
 
